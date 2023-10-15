@@ -1,0 +1,52 @@
+/* Style for the side panel */
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  padding: 15px;
+  z-index: 1;
+}
+
+.side-panel-item a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block; /* Ensure the whole area is clickable */
+  position: relative; /* Needed for the label positioning */
+}
+
+/* Style for the labels */
+.label {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: -120px; /* Initial position off-screen to the right */
+  transform: translateY(-50%); /* Center vertically */
+  text-align: left;
+  color: #FFFFFF;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease, right 0.5s ease; /* Add a smooth transition effect */
+  font-style: italic;
+}
+
+.side-panel-item:hover .label {
+  right: -65px; /* Project labels to the right on hover */
+  opacity: 1; /* Show the label on hover */
+}
+
+/* Style for the links/icons */
+.side-panel-item {
+  margin: 10px 0;
+  position: relative; /* Position relative to place labels inside */
+}  
+
+
+.side-panel-item img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}  
+

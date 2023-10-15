@@ -2,6 +2,7 @@ import React from "react";
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
+import SidePanel from "@/components/SidePanel";
 import { Inter } from 'next/font/google'
 
 
@@ -31,8 +32,11 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
+        <div className="view">
+        <SidePanel/>
         <Navbar/>
         {children}
+        </div>
       </body>
     </html>
   );

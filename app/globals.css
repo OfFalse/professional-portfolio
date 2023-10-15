@@ -11,13 +11,20 @@
 
   /* Background Colors */
   --background-light: #F5F5F5;
-  --background-dark: #20466B; 
+  /* --background-dark: #20466B;  */
+  --background-dark: #0c1830;
 
   /* Text Colors */
   --text-light: #FFFFFF; 
   --text-dark: #333333; 
 }
 
-.body {
+body {
   font-family: sans-serif;
+  margin: 0
+}
+
+.view {
+  background-color: var(--background-dark);
+  height: 100vh;
 }
