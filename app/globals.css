@@ -1,0 +1,23 @@
+:root {
+  /* Primary Colors */
+  --primary-light: #00FFCA; 
+  --primary: #00CCA5; 
+  --primary-dark: #00997F;
+
+  /* Secondary Colors */
+  --secondary-light: #C34EE8;
+  --secondary: #9B32A7; 
+  --secondary-dark: #781B8E; 
+
+  /* Background Colors */
+  --background-light: #F5F5F5;
+  --background-dark: #20466B; 
+
+  /* Text Colors */
+  --text-light: #FFFFFF; 
+  --text-dark: #333333; 
+}
+
+.body {
+  font-family: sans-serif;
+}
