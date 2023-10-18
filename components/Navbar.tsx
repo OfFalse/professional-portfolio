@@ -44,6 +44,7 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar">
+      <div className="nav-wrapper">
       <div className="logo" onClick={handleLogoClick}>
         <img src="logo-no-portfolio.png" alt="Logo" />
         <div className="vertical"></div>
@@ -52,13 +53,15 @@ const Navbar = () => {
       <ul className="nav-list">
         {navOptions.map((item, index)=> {
           return <li key={`nav-option-${index}`}
-            className={`nav-item${selectedNavItem === item.name ? ' selected' : ''}`}
-            onClick={() => handleNavItemClick(item)}
+          className={`nav-item${selectedNavItem === item.name ? ' selected' : ''}`}
+          onClick={() => handleNavItemClick(item)}
           >
             {item.name}
           </li>
         })}
       </ul>
+      <div className="menu-icon">&#9776;</div>
+        </div>
     </nav>
   );
 };
