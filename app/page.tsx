@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import "../styles/pages/Home.css";
 
@@ -15,7 +17,7 @@ export default function Home() {
 
         <section className="about-me">
           <h2>About Me</h2>
-          <p>
+          <p className="typing-text anim-typewriter">
             I'm a passionate software engineer with a strong focus on creating
             meaningful and efficient solutions. Let's build the future together!
           </p>

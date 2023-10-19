@@ -86,8 +86,15 @@
   color: #fff;
 }
 
+.menu-icon {
+  display: none;
+  font-size: 48px;
+  cursor: pointer;
+  color: white;
+}
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1200px) {
   .menu-icon {
     display: block;
   }

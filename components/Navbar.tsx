@@ -18,8 +18,6 @@ const navOptions: MenuItem[] = [
   {name: "Contact", route: "contact"}
 ]
 
-
-
 const Navbar = () => {
   const [selectedNavItem, setSelectedNavItem] = useState("Home");
 
@@ -38,6 +36,9 @@ const Navbar = () => {
     router.push(`/${item.route}`);
     setSelectedNavItem(item.name);
   };
+
+  
+
 
   const handleLogoClick = () => {
     setSelectedNavItem('Home');
