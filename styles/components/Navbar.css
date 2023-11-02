@@ -4,7 +4,7 @@
 
 .nav-wrapper {
   margin: auto;
-  align-items: center; 
+  align-items: center;
   width: 70%;
   display: flex;
   justify-content: space-between;
@@ -19,40 +19,41 @@
 
 .nav-item {
   border-radius: 20px;
-  background-color:var(--primary-light);
+  /* background-color:var(--blue-light); */
   padding: 5px 10px;
   text-align: center;
-  transition: background-color 0.3s, transform 0.2s, margin-right 1s;
   cursor: pointer;
-  color: var(--text-dark);
-  letter-spacing: 1px;
+  color: var(--text-light);
+  letter-spacing: .5px;
   font-size: large;
-  font-weight: 400;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s, margin-right 1s;
 }
 
 .nav-item a {
   text-decoration: none;
 }
 .nav-item:hover {
-  background-color: var(--primary);
+  color: var(--blue-dark);
 }
 
 .nav-item.selected {
-  background-color: var(--secondary-light);
-  color: var(--text-light);
-  transition: margin-right 1s, color 1s, background-color 1s;
+  /* background-color: var(--purple-light); */
+  color: var(--blue);
   margin-right: 15px;
   cursor: default;
+  transition: margin-right 1s, color 1s, background-color 1s;
 }
 
 .vertical {
   margin: auto;
-  border-left: 2px solid var(--primary-dark);
+  border-left: 2px solid var(--blue);
   height: 45px;
 }
 
 .logo {
   display: flex;
+  align-items: center;
 }
 
 .logo img {
@@ -64,7 +65,7 @@
 
 .logo h1 {
   margin-left: 15px;
-  color: var(--primary-light);
+  color: var(--blue);
   letter-spacing: 2px;
   font-weight: 600;
 }
