@@ -1,5 +1,5 @@
 import React from 'react';
-import { SidePanelProps , TPMedia} from '@/datasets/TPMedia';
+import {TPMedia} from '@/datasets/TPMedia';
 import "../styles/components/SidePanel.css"
 
 

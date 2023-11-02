@@ -9,6 +9,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
+  font-size: 1.5rem;
 }
 
 
@@ -25,7 +26,6 @@
 
   /* Background Colors */
   --background-light: #F5F5F5;
-  /* --background-dark: #20466B;  */
   --background-dark: #081b29;
   --background-secondary: #112e42;
 

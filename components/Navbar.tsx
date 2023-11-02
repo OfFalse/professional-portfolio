@@ -48,8 +48,8 @@ const Navbar = () => {
       <div className="nav-wrapper">
       <div className="logo" onClick={handleLogoClick}>
         <img src="logo-no-portfolio.png" alt="Logo" />
-        <div className="vertical"></div>
-        <h1>Professional Portfolio</h1>
+        {/* <div className="vertical"></div> */}
+        {/* <h1>Professional Portfolio</h1> */}
       </div>
       <ul className="nav-list">
         {navOptions.map((item, index)=> {

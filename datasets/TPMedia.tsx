@@ -6,3 +6,4 @@ export const TPMedia: SidePanelProps[] = [
    { url: "https://www.credly.com/users/nicolaas-defaux", icon: "/credly.png", label: "Credly" },
    { url: "https://github.com/OfFalse/", icon: "/github.png", label: "GitHub" }
 ];
+

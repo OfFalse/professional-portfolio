@@ -1,119 +1,252 @@
+/* Styling for the heading and mugshot */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+.header-content h2 {
+  font-size: 2rem;
+}
+
+.header-content .scroll-text {
+  position: absolute;
+
+}
+
+.header-content .scroll-text h2, span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: transparent;
+  /* -webkit-text-stroke: 2px var(--blue-dark); */
+  background-image: linear-gradient(var(--blue-dark), var(--blue-light));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: 0 0; 
+}
+
+.header-content .scroll-text h2::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 0;
+ height: 100%;
+ border-right: 2px solid var(--blue-dark);
+ z-index: -1 ;
+ animation: homeCursor 6s linear infinite;
+ animation-delay: 2s;
+}
+
+#frame-1 {
+  animation: role-1BG-Opacity 24s linear infinite;
+  animation-delay: 2s;
+}
+
+#frame-2 {
+  animation: role-2BG-Opacity 24s linear infinite;
+  animation-delay: 2s;
+}
+
+#frame-3 {
+  animation: role-3BG-Opacity 24s linear infinite;
+  animation-delay: 2s;
+}
+
+#frame-4 {
+  animation: role-4BG-Opacity 24s linear infinite;
+  animation-delay: 2s;
+}
+
+.role-1 {
+  animation: role-1BG 24s linear infinite;
+  animation-delay: 2s;
+  z-index: 40;
+}
+
+
+.role-2 {
+  animation: role-2BG 24s linear infinite;
+  animation-delay: 2s;
+  z-index: 30;
+}
+.role-3 {
+  animation: role-3BG 24s linear infinite;
+  animation-delay: 2s;  
+}
+
+.role-4 {
+  animation: role-4BG 24s linear infinite;
+  animation-delay: 2s;
+}
+
+
 /* Style for the profile picture */
 .profile-picture {
   border-radius: 50%;
   overflow: hidden;
-  width: 150px;
-  height: 150px;
+  position: relative;
+  width: 300px;
+  height: 300px;
   margin-bottom: 20px;
-  
-  /* border: 3px solid var(--blue-dark); */
-/* } */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
 
 .profile-picture img {
   width: 90%;
   height: 90%;
-  object-fit: cover;
-  border: 3px solid var(--blue-dark);
   border-radius: 50%;
-  margin: 10px;
+  border: .3rem solid var(--blue);
+  object-fit: cover;
 }
 
-@keyframes spin {
-  from {transform: translate(-50%, -50%) rotate(0);}
-  to   {transform: translate(-50%, -50%) rotate(360deg);}
-}
-.rotating-border {
-  --border-radius: 1rem;
-  --border-size: 0.5rem;
-  --padding: 1rem;
-  
-  position: relative;
-  overflow: hidden;
-  font-size: 2rem;
-  padding: calc(var(--padding) + var(--border-size));
-  border-radius: var(--border-radius);
-  display: inline-block;
-  
-  &::before {
-    content: '';
-    display: block;
-    background: var(--border-bg);
-    width: calc(100% * 1.41421356237);
-    padding-bottom: calc(100% * 1.41421356237);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 100%;
-    z-index: -2;
-    animation: spin 5s linear infinite;
-  }
-  &--reverse::before{
-    animation-direction: reverse;
-  }
-  &::after{
-    content: '';
-    position: absolute;
-    inset: var(--border-size);
-    background: white;
-    z-index: -1;
-    border-radius: calc(var(--border-radius) - var(--border-size));
-  }
+.cut-circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: .3rem solid var(--background-dark);
+  border-bottom: .3rem solid var(--background-dark);
+  border-right: .3rem solid var(--blue);
+  border-left: .3rem solid var(--blue);
+  animation: spinner 32s linear infinite;
 }
 
-.rotating-border--blue-back{
-  --border-radius: 100%;
-  --border-bg: conic-gradient(
-    var(--blue-dark) 0.1666turn, 
-    var(--background-dark) 0.1666turn 0.3333turn, 
-    var(--blue-dark) 0.3333turn 0.5turn, 
-    var(--background-dark) 0.5turn 0.6666turn, 
-    var(--blue-dark) 0.6666turn 0.8333turn, 
-    var(--background-dark) 0.8333turn
-  );
-  padding: 10px;
-  width: 2.5rem;
-  height: 2.5rem;
-  text-align: center;
+.profile-picture .cut-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
 }
 
 /* Style for the content */
 .content {
   text-align: left;
 }
+.roles-container {
+  display: flex;
+  flex-direction: column;
+}
 
-/* Add any additional styling you need for the rest of the content */
-
-.typing-text {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: solid rgb(255, 255, 255); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-
+.scroll-text {
+  width: max-content;
 }
 
 /* The typing effect */
-/* @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-} */
-
-/* The typewriter cursor effect */
-/* @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-} */
-
-/* .anim-typewriter{
-  animation: typewriter 4s steps(89) 1s 1 normal both,
-             blinkTextCursor 5000ms steps(89) infinite normal;
+@keyframes role-1BG {
+  0%,
+  2.5%,
+  25%,
+  100% {
+    background-position: -20.4rem 0;
+  }
+  16.25%,
+  21.25% {
+    background-position: 0 0;
+  }
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 100%;}
+
+@keyframes role-1BG-Opacity {
+  0%,
+  2.4%,
+  26%,
+  100% {opacity: 0;}
+  2.5%,
+  25% {opacity: 1;}
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-} */
+
+
+@keyframes role-2BG {
+  0%,
+  27.5%,
+  50%,
+  100% {
+    background-position: -26.7rem 0;
+  }
+  41.25%,
+  46.25% {
+    background-position: 0 0;
+  }
+}
+@keyframes role-2BG-Opacity {
+  0%,
+  27.4%,
+  50.1%,
+  100% {opacity: 0;}
+  27.5%,
+  50% {opacity: 1;}
+}
+
+@keyframes role-3BG {
+  0%,
+  52.5%, 
+  75%,
+  100% {
+    background-position: -19.6rem 0;
+  }
+  66.25%,
+  71.25% {
+    background-position: 0 0;
+  }
+}
+@keyframes role-3BG-Opacity {
+  0%,
+  52.4%,
+  75.1%,
+  100% {opacity: 0;}
+  52.5%,
+  75% {opacity: 1;}
+}
+
+@keyframes role-4BG {
+  0%,
+  77.5%, 
+  100% {
+    background-position: -16.6rem 0;
+  }
+  91.25%,
+  96.25% {
+    background-position: 0 0;
+  }
+}
+@keyframes role-4BG-Opacity {
+  0%,
+  77.4%,
+  100% {opacity: 0;}
+  77.5%,
+  99.9% {opacity: 1;}
+}
+
+@keyframes homeCursor {
+  0%,
+  10%, 
+  100% {
+    width: 0;
+  }
+  65%,
+  78%,
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+  75%,
+  81% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner {
+  from {transform: translate(-50%, -50%) rotate(0deg);}
+  to {transform: translate(-50%, -50%) rotate(360deg);}
+}
