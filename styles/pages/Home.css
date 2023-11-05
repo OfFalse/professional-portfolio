@@ -10,20 +10,30 @@ h1 {
   font-size: 3.5rem;
 }
 
+.header-col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-col {
+  justify-content: center;
+  align-items: center;
+}
+
 .header-content h2 {
   font-size: 2rem;
 }
 
 .header-content .scroll-text {
   position: absolute;
-
+  height: max-content;
 }
 
 .header-content .scroll-text h2, span {
   font-size: 2rem;
   font-weight: 700;
   color: transparent;
-  /* -webkit-text-stroke: 2px var(--blue-dark); */
   background-image: linear-gradient(var(--blue-dark), var(--blue-light));
   background-repeat: no-repeat;
   -webkit-background-clip: text;
@@ -39,50 +49,50 @@ h1 {
  height: 100%;
  border-right: 2px solid var(--blue-dark);
  z-index: -1 ;
- animation: homeCursor 6s linear infinite;
- animation-delay: 2s;
+ animation: homeCursor 5s linear infinite;
+ animation-delay: .001s;
 }
 
 #frame-1 {
-  animation: role-1BG-Opacity 24s linear infinite;
-  animation-delay: 2s;
+  animation: role-1BG-Opacity 20s linear infinite;
+  animation-delay: .001s;
 }
 
 #frame-2 {
-  animation: role-2BG-Opacity 24s linear infinite;
-  animation-delay: 2s;
+  animation: role-2BG-Opacity 20s linear infinite;
+  animation-delay: .001s;
 }
 
 #frame-3 {
-  animation: role-3BG-Opacity 24s linear infinite;
-  animation-delay: 2s;
+  animation: role-3BG-Opacity 20s linear infinite;
+  animation-delay: .001s;
 }
 
 #frame-4 {
-  animation: role-4BG-Opacity 24s linear infinite;
-  animation-delay: 2s;
+  animation: role-4BG-Opacity 20s linear infinite;
+  animation-delay: .001s;
 }
 
 .role-1 {
-  animation: role-1BG 24s linear infinite;
-  animation-delay: 2s;
+  animation: role-1BG 20s linear infinite;
+  animation-delay: .001s;
   z-index: 40;
 }
 
 
 .role-2 {
-  animation: role-2BG 24s linear infinite;
-  animation-delay: 2s;
+  animation: role-2BG 20s linear infinite;
+  animation-delay: .001s;
   z-index: 30;
 }
 .role-3 {
-  animation: role-3BG 24s linear infinite;
-  animation-delay: 2s;  
+  animation: role-3BG 20s linear infinite;
+  animation-delay: .001s;  
 }
 
 .role-4 {
-  animation: role-4BG 24s linear infinite;
-  animation-delay: 2s;
+  animation: role-4BG 20s linear infinite;
+  animation-delay: .001s;
 }
 
 
@@ -137,6 +147,7 @@ h1 {
 .roles-container {
   display: flex;
   flex-direction: column;
+  height:100%;
 }
 
 .scroll-text {
@@ -172,7 +183,7 @@ h1 {
   27.5%,
   50%,
   100% {
-    background-position: -26.7rem 0;
+    background-position: -27.9rem 0;
   }
   41.25%,
   46.25% {

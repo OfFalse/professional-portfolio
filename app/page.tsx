@@ -24,6 +24,7 @@ export default function Home() {
           {/* <h1>Greetings, tech enthusiast!</h1>
           <br/> */}
         <header>
+          <div className="header-col">
         <div className="header-content">
           <h2>Hi, I'm <span>Nic Defaux</span></h2>
           <br />
@@ -37,10 +38,13 @@ export default function Home() {
             })}
         </div> 
           </div>
+          </div>
+          <div className="header-col" id="profile-col">
       <div className="profile-picture">
         <img src="/mugshot.jpg" alt="Profile" />
         <span className="cut-circle"></span>
       </div>
+          </div>
         </header>
         <br />
       <div className="content">
