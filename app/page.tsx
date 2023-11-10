@@ -26,7 +26,7 @@ export default function Home() {
         <header>
           <div className="header-col">
         <div className="header-content">
-          <h2>Hi, I'm <span>Nic Defaux</span></h2>
+          <h2>Hi, I'm <span>Nic</span></h2>
           <br />
           <div className='roles-container'>
             {JobRoles.map((item, key) => {

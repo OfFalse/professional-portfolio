@@ -65,3 +65,7 @@ section {
   width: 70%;
   margin: auto;
 }
+
+.half-col {
+  width: 50%;
+}

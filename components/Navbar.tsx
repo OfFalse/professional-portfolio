@@ -36,10 +36,7 @@ const Navbar = () => {
     router.push(`/${item.route}`);
     setSelectedNavItem(item.name);
   };
-
   
-
-
   const handleLogoClick = () => {
     setSelectedNavItem('Home');
   };
