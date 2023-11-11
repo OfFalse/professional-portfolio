@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export interface EntryProps {
   title: string;
@@ -8,6 +9,9 @@ export interface EntryProps {
 }
 
 const Entry: React.FC<EntryProps> = ({ title, content, img }) => {
+  
+  const {ref, inView} = useInView({threshold: 0});
+
   return (
     <div className="blog-entry">
       <h2>{title}</h2>

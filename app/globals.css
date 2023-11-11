@@ -66,6 +66,22 @@ section {
   margin: auto;
 }
 
-.half-col {
+.row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.col {
   width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
