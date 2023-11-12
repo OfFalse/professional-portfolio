@@ -76,15 +76,14 @@ h1 {
 .role-1 {
   animation: role-1BG 20s linear infinite;
   animation-delay: .001s;
-  z-index: 40;
 }
 
 
 .role-2 {
   animation: role-2BG 20s linear infinite;
   animation-delay: .001s;
-  z-index: 30;
 }
+
 .role-3 {
   animation: role-3BG 20s linear infinite;
   animation-delay: .001s;  
@@ -183,7 +182,7 @@ h1 {
   27.5%,
   50%,
   100% {
-    background-position: -27.9rem 0;
+    background-position: -18.55rem 0;
   }
   41.25%,
   46.25% {
@@ -204,7 +203,7 @@ h1 {
   52.5%, 
   75%,
   100% {
-    background-position: -19.6rem 0;
+    background-position: -15.25rem 0;
   }
   66.25%,
   71.25% {

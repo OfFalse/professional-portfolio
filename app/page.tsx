@@ -10,9 +10,9 @@ export type JobRoleType = {
 const JobRoles: JobRoleType[] = [{
   value: 'FullStack Developer'
 }, {
-  value: 'Technical Business Analyst'
+  value: 'Cloud Practitioner'
 }, {
-  value: 'Solutions Architect'
+  value: 'Digital Futurist'
 }, {
   value: 'Tech Aficionado'
 }]

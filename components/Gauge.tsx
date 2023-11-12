@@ -8,20 +8,37 @@ interface GaugeProps {
 }
 /* Responsive guages relfecting values between 0 - 100 */
 const Gauge: React.FC<GaugeProps> = ({ value, title, color }) => {
-  const gaugeColor = color === "primary" ? '#00bfff' : '#E5D4FF';
-  const labelColor = color === "primary" ? '#0087e0' : '#D0A2F7';
+
+  const primary = {
+    gaugeColor: '#00bfff',
+    labelColor: '#0087e0',
+    labelXPos: '11',
+    labelRectXPos: '0',
+    percXPos: '96.5',
+    gaugeXPos: '0'
+  }
+  const secondary = {
+    gaugeColor: '#B15EFF',
+    labelColor: '#7743DB',
+    labelXPos: '89',
+    labelRectXPos: '78',
+    percXPos: '3.5',
+    gaugeXPos: 100 - value,
+  }
+
+  const inst = color === "primary" ? primary : secondary;
 
   
   return (
     <div className='gauge'>
-      <svg viewBox="0 0 100 4">
-        <rect x="0" y="1" width="100" height="4" fill="#ddd" />
-        <rect x="15" y="1" width={value * .85} height="4" fill={gaugeColor} />
-        <text x="97.5" y="3.25" className='percentage'>
+      <svg viewBox="0 0 100 6">
+        <rect x="0" y="1" width="100" height="6" fill="#ddd" />
+        <rect x={inst.gaugeXPos} y="1" width={value} height="6" fill={inst.gaugeColor} />
+        <text x={inst.percXPos} y="70%" className='percentage' dominantBaseline='centre' textAnchor='middle'>
           {value + '%'}
         </text>
-        <rect x="0" y="1" width="15" height="4" fill={labelColor} />
-        <text x="1" y="3.25" className='skill-label'>
+        <rect x={inst.labelRectXPos} y="1" width="22" height="6" fill={inst.labelColor} />
+        <text x={inst.labelXPos} y="70%" className='skill-label' dominantBaseline='centre' textAnchor='middle'>
           {title}
         </text>
       </svg>
