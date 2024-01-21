@@ -6,7 +6,7 @@ import GaugeList from "../../components/Gauge";
 import { EntryProps } from "../../components/Entry";
 
 const techSkills = [
-  { value: 85, title: "Javascript" },
+  { value: 85, title: "Typescript" },
   { value: 75, title: "PostGreSQL" },
   { value: 75, title: "Node.JS" },
   { value: 75, title: "Node.JS" },
@@ -21,14 +21,8 @@ const softSkills = [
   { value: 80, title: "Leadership" },
 ];
 
-/*JavaScript (ExpressJS, VueJS, Jest), PostgreSQL, HTML5/CSS, AWS, Docker, K8, Agile (SCRUM, Kanban), Git, Consulting, Communication, Complex Problem Solving, Presentation, Requirement Elicitation*/
-
 const About: React.FC = () =>
 {
-
-  // const blogData: EntryProps[] = [
-  //   { title: "Blog Post 1", content: "Content for Blog Post 1", img: "" },
-  // ];
 
   return (<section>
     <div>About Me</div>

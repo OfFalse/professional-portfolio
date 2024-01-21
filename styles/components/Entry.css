@@ -11,3 +11,9 @@
 .blog-entry h2 {
   color: var(--text-light);
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
