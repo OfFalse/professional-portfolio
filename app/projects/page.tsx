@@ -1,8 +1,10 @@
 import React from "react";
-import "../../styles/components/Entry.css"
-import Entry from '../../components/Entry';
 
-export default function Projects() {
+import "../../styles/components/Entry.css";
+// import Entry from '../../components/Entry';
+
+export default function Projects()
+{
   return (<section>
     <div className="row">
       <div>TODO:
@@ -11,7 +13,7 @@ export default function Projects() {
         <p> - Create Content </p>
       </div>
     </div>
-   {/* <div className="background">
+    {/* <div className="background">
     
       {blogData.map((entry, index) => (
         <div
@@ -24,5 +26,5 @@ export default function Projects() {
         </div>
       ))}
     </div> */}
-  </section>)
+  </section>);
 }
