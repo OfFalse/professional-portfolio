@@ -29,18 +29,16 @@ const Gauge: React.FC<GaugeProps> = ({ value, title, color }) =>
   };
 
   const inst = color === "primary" ? primary : secondary;
-
-
   return (
     <div className='gauge'>
       <svg viewBox="0 0 100 6">
         <rect x="0" y="1" width="100" height="6" fill="#ddd" />
         <rect id="gaugeMeasure" x={inst.gaugeXPos} y="1" width={value} height="6" fill={inst.gaugeColor} />
-        <text x={inst.percXPos} y="70%" className='percentage' dominantBaseline='centre' textAnchor='middle'>
+        <text id="gaugeText" x={inst.percXPos} y="70%" className='percentage' dominantBaseline='centre' textAnchor='middle'>
           {value + "%"}
         </text>
-        <rect x={inst.labelRectXPos} y="1" width="22" height="6" fill={inst.labelColor} />
-        <text x={inst.labelXPos} y="70%" className='skill-label' dominantBaseline='centre' textAnchor='middle'>
+        <rect id="gaugeTitle" x={inst.labelRectXPos} y="1" width="22" height="6" fill={inst.labelColor} />
+        <text id="gaugeText" x={inst.labelXPos} y="70%" className='skill-label' dominantBaseline='centre' textAnchor='middle'>
           {title}
         </text>
       </svg>
